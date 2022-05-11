@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@600&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>JavaScript Quiz</title>
+</head>
+<body>
+    <header>
+            <nav>
+                <ul class="nav nav-justified">
+                        <li id="view-high-scores" class="nav-item">
+                            <span>View High Scores</span>
+                        </li>
+                        <li id="timer" class="hidden nav-item">10 minutes 0 seconds</li>
+                </ul>
+            </nav>
+    </header>
+    <div class="container" id="welcome">
+        <div class="row align-items-center text-center">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Welcome to the coding quiz challenge!  You have 10 minutes to get through 10 questions.  60 seconds will 
+                be deducted from the timer for each wrong answer.
+            </p>
+            <div class="col justify-content-center">
+                <button class="start">Start</button>
+            </div>
+        </div>
+    </div>
+    <div class="container hidden questions-and-answers">
+        <div class="row align-items-center text-center">
+            <h1 class="question"></h1>
+            <div class="col justify-content-center">
+                <button id="answer1" class="answer"></button>
+                <button id="answer2" class="answer"></button>
+                <button id="answer3" class="answer"></button>
+                <button id="answer4" class="answer"></button>
+            </div>
+        </div>
+    </div>
+    <div id="high-scores" class="container hidden">
+        <div class="row align-items-center text-center">
+            <h1>High Scores</h1>
+            <ul id="dynamic-list">
+            </ul>
+            <div class="col justify-content-center">
+                <button class="back">Back</button>
+                <form method="POST" class="hidden">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <button id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
